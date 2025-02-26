@@ -1,19 +1,24 @@
 import { useState } from "react";
 import { EyeIcon, EyeOffIcon, LockIcon } from "lucide-react";
-import TextFieldInput from "../../../shared/components/TextFieldInput";
+import TextFieldInput from "../components/ui/TextFieldInput";
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { ClipLoader } from "react-spinners";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 
 const LoginForm = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-  const { loginDispatch, isLoading, error } = useAuth();
+  
+  const { loginDispatch, isLoading, error, isAuthenticated } = useAuth();
   const [formData, setFormData] = useState({
     email: "testadmin@gmail.com",
     password: "@Password12345",
   });
+
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard" replace />;
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();

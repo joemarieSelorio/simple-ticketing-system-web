@@ -1,10 +1,10 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import LoginForm from "./features/auth/components/Login";
-import UserDashboard from "./features/dashboard/user/UserDashboard";
+import LoginForm from "./pages/Login";
+import UserDashboard from "./pages/UserDashboard";
 import { Provider } from "react-redux";
-import ProtectedRoute from "./shared/components/ProtectedRoute";
-import store from "./app/store";
+import ProtectedRoute from "./routes/ProtectedRoute";
+import store from "./store/store";
 
 function App() {
   return (
