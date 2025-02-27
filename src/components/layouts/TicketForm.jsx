@@ -63,6 +63,7 @@ const TicketForm = ({ onClose, onTicketCreated  }) => {
     try {
       // Submit draft without assignee validation
       await submitTicket(draftTicket);
+      onTicketCreated(); 
     } catch (err) {
       console.error("Error creating ticket:", err);
     }
@@ -78,7 +79,7 @@ const TicketForm = ({ onClose, onTicketCreated  }) => {
 
     const submittedTicket = {
       ...formData,
-      status: "submitted",
+      status: "requested",
     };
     await submitTicket(submittedTicket);
     onTicketCreated(); 

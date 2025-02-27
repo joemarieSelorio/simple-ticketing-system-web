@@ -25,25 +25,19 @@ const TicketList = ({ tickets, currentPage, totalPages, onPageChange }) => {
                 </div>
                 <span
                   className={`px-3 py-1 text-sm font-medium rounded-full ${
-                    ticket.priority === "high"
+                    ticket.status === "rejected"
                       ? "bg-red-100 text-red-800"
-                      : ticket.priority === "medium"
+                      : ticket.status === "priority"
                       ? "bg-yellow-100 text-yellow-800"
                       : "bg-green-100 text-green-800"
                   }`}
                 >
-                  {ticket.priority}
+                  {ticket.status}
                 </span>
               </div>
 
               <div className="mt-3 flex justify-between items-center text-sm text-gray-500">
                 <div className="flex flex-col gap-1">
-                  <span>
-                    Status:{" "}
-                    <span className="font-medium text-gray-900">
-                      {ticket.status}
-                    </span>
-                  </span>
                   <span>
                     Assigned To:{" "}
                     <span className="font-medium text-gray-900">
