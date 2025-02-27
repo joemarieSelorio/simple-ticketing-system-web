@@ -12,8 +12,8 @@ const LoginForm = () => {
   
   const { loginDispatch, isLoading, error, isAuthenticated } = useAuth();
   const [formData, setFormData] = useState({
-    email: "testadmin@gmail.com",
-    password: "@Password12345",
+    email: "",
+    password: "",
   });
 
   if (isAuthenticated) {
