@@ -51,7 +51,7 @@ const TicketList = ({ tickets, currentPage, totalPages, onPageChange }) => {
                     </span>
                   </span>
                   <span>
-                    Created: {new Date(ticket.createdDate).toLocaleDateString()}
+                    Created: {new Date(ticket.createdAt).toLocaleDateString()}
                   </span>
                 </div>
               </div>
