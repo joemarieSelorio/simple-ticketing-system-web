@@ -1,8 +1,50 @@
-# React + Vite
+# simple-ticketing-system-web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Web application for the sample ecommerce platform
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+- [Git](https://git-scm.com/downloads)
+- [Node 20.x.x](https://nodejs.org)
+- [NPM 10.x.x](https://nodejs.org)
+
+### Steps
+
+- Manual
+
+	- Clone repository
+
+		```
+	  https://github.com/joemarieSelorio/simple-ticketing-system-web.git
+		```
+
+	- Access application directory
+
+		```
+		cd simple-ticketing-system-web
+		```
+
+- Running the application
+
+	- Run the application manually
+		- Install dependencies
+			```
+			npm install
+			```
+    - Sample env
+  
+      - ```
+          VITE_API_URL=http://localhost:3000
+        ```  
+	- Start
+		-	Recommended:
+
+			```
+			npm run dev
+			```
+- Check if application is running
+
+	```
+	http://<HOST>:<PORT>/
+	```
