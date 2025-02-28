@@ -1,6 +1,6 @@
 # simple-ticketing-system-web
 
-Web application for the sample ecommerce platform
+Web application for the simple ticketing system
 
 
 ## Installation
